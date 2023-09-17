@@ -2,7 +2,7 @@
 This repo is an guideline for learning C++ in Structure and Organization of Programming Language
 Author: Minh Anh Tran
 
-## Introduction and Overview of C++
+## I. Introduction and Overview of C++
 ### 1. What is C++? 
 C++ is one of the world's most popular programming languages. It is a cross-platform language that can be used to create high-performance applicationn and gives programmers a high level of control over system resources and memory. 
 ### 2. History
@@ -16,7 +16,42 @@ There are many soures to learn C++ now, and here are top 5 resources for now:
 - Best Free Certification Program: Coding for Everyone: C and C++ Specialization by Coursera
 - Best Online Webinar: C++ Essential Training by LinkedIn Learning
 
-## Getting Started
+## II. Getting Started
+### 1. Set up C++ environment on MacOS
+C++ is a compiled language meaning your program's source code must be translated (compiled) before it can be run on your computer. Therefore, we have to install VS Code and a compliler.
+#### a. Install a complier
+Open a macOS Terminal window and enter the following command:
+```
+xcode-select --install
+```
+To ensure that our clang is installed, enter the below command:
+```
+clang --version
+```
+#### b. Install Visual Studo C/C++ IDE
+- Firstly, we need to install [Visual Studio on MacOS](https://code.visualstudio.com/docs/setup/mac).
+- Secondly, install the [C++ extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools). You can install the C/C++ extension by searching for 'c++' in the Extensions view.
+- Lastly, install the [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) to run C++. You can also install the Code Runner by searching for 'Code Runner' in the Extensions view.
+When using Code Runner, the output of our program will be shown in the Output panel. If you want to see the output in the Terminal panel, you can follow my instruction:
+  - Press ctrl+, to open up the settings panel
+  - On the search bar type code runner terminal
+  - You should be able to see an option named Code-runner: Run In Terminal
+  - Check off the option and you are good to go.
+#### c. "Hello World" program
+Let's begin with the most basin program: "Hello World". Please enter the code below to run your very first C++ program:
+```
+#include <iostream>
+
+int main() {
+    std::cout << "Hello World!";
+    return 0;
+}
+```
+Next, push the Run code button to see the output. "Hello World!" will be printed in the terminal. 
+
+
+
+
 
 
 
