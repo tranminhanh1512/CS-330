@@ -1,5 +1,6 @@
 # CS-330 - C++
-This repo is an guideline for learning C++ in Structure and Organization of Programming Language
+This repo is an guideline for learning C++ in Structure and Organization of Programming Language.
+
 Author: Minh Anh Tran
 
 ## I. Introduction and Overview of C++
@@ -38,7 +39,7 @@ When using Code Runner, the output of our program will be shown in the Output pa
   - You should be able to see an option named Code-runner: Run In Terminal
   - Check off the option and you are good to go.
 #### c. "Hello World" program
-Let's begin with the most basin program: "Hello World". Please enter the code below to run your very first C++ program:
+Let's begin with the most basic program: "Hello World". Please enter the code below to run your very first C++ program:
 ```
 #include <iostream>
 
