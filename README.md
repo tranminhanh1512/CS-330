@@ -49,6 +49,98 @@ int main() {
 }
 ```
 Next, push the Run code button to see the output. "Hello World!" will be printed in the terminal. 
+#### d. Write comments in C++
+There are two ways to write comments in C++
+- Multiline comments: The /* (slash, asterisk) characters, followed by any sequence of characters (including new lines), followed by the */ characters.
+- Single-line comments: The // (two slashes) characters, followed by any sequence of characters.
+
+## III. Data types, Naming conventions, and Bindings
+### 1. Keywords
+A key word, or a reversed word, is a word that are used for a special purpose and cannot be used as an identifier, such as the name of a variable, function, or label – it is "reserved from use". In C++, there are 95 total keywords. Here is a table for some common keywords:
+
+<table class="table">
+  <tr>
+    <th colspan="5">C++ keywords</th>
+  </tr>
+	<tr>
+		<td>asm</td>
+		<td>double</td>
+		<td>new</td>
+		<td>switch</td>
+		<td>auto</td>
+	</tr>
+	<tr>
+		<td>else</td>
+		<td>operator</td>
+		<td>template</td>
+		<td>break</td>
+		<td>enum</td>
+	</tr>
+	<tr>
+		<td>private</td>
+		<td>this</td>
+		<td>case</td>
+		<td>extern</td>
+		<td>protected</td>
+	</tr>
+	<tr>
+		<td>throw</td>
+		<td>catch</td>
+		<td>float</td>
+		<td>public</td>
+		<td>try</td>
+	</tr>
+	<tr>
+		<td>char</td>
+		<td>for</td>
+		<td>register</td>
+		<td>typedef</td>
+		<td>class</td>
+	</tr>
+	<tr>
+    <td>friend</td>
+		<td>return</td>
+		<td>union</td>
+		<td>const</td>
+		<td>goto</td>
+	</tr>
+	<tr>
+		<td>short</td>
+		<td>unsigned</td>
+		<td>continue</td>
+		<td>if</td>
+		<td>signed</td>
+	</tr>
+	<tr>
+		<td>virtual</td>
+		<td>default</td>
+		<td>inline</td>
+		<td>sizeof</td>
+		<td>void</td>
+	</tr>
+ 	<tr>
+		<td>delete</td>
+		<td>int</td>
+		<td>static</td>
+		<td>volatile</td>
+		<td>do</td>
+	</tr>
+ 	<tr>
+		<td>long</td>
+		<td>struct</td>
+		<td>while</td>
+		<td>xor</td>
+		<td>typeid</td>
+	</tr>
+</table>
+
+
+
+
+
+
+
+
 
 
 
