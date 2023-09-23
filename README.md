@@ -51,8 +51,8 @@ int main() {
 Next, push the Run code button to see the output. "Hello World!" will be printed in the terminal. 
 #### d. Write comments in C++
 There are two ways to write comments in C++
-- Multiline comments: The /* (slash, asterisk) characters, followed by any sequence of characters (including new lines), followed by the */ characters.
-- Single-line comments: The // (two slashes) characters, followed by any sequence of characters.
+- Multiline comments: The /* (slash, asterisk) characters, followed by comments, ending with the */ characters.
+- Single-line comments: The // (two slashes) characters, followed by comments.
 
 ## III. Data types, Naming conventions, and Bindings
 ### 1. Keywords
@@ -135,7 +135,7 @@ A key word, or a reversed word, is a word that are used for a special purpose an
 </table>
 
 ### 2. Naming conventions
-Naming conventions in C++ are not enforced by intepreter or compiler. They follow the standards withi the C++ community. Below are some naming conventions in C++: 
+Naming conventions in C++ are not enforced by intepreter or compiler. They follow the standards within the C++ community. Below are some naming conventions in C++: 
 - CamelCase: used for variables and functions.
 - PascalCase: used for classes and types.
 - Upper case with underscore: used for constants or macro.
@@ -273,9 +273,29 @@ int main() {
 In C++, variables can mutable or immutable based on how they are declared and used. Basically, primitives like int, double, float, char, string, bool or objects and non-constant variables are mutable. However, if you want your variable to be immutable, you can declare it with "const" keyword.
 
 ### 5. Types in operation
+#### a. Operators
+| Operator  | Operation 
+| --------- | --------- 
+| Arithmetic Operators | +: Addition  <br /> -: Subtraction  <br /> *: Multiplication  <br /> /: Division  <br /> %: Modulo Operation (Remainder after division) <br /> ++: Increment <br /> --: Decrement
+| Assignment Operators | =: Assign <br /> +=: Add and assign <br /> -=: Subtract and assign <br /> *=: Multiply and assign <br /> /=: Divide and assign 
+| Relational operators | ==: Is equal to <br /> !=: Not equal to <br /> >: Greater than <br /> <: Less than <br /> >= Greater than or Equal to <br /> <= Less than or Equal to
+|Bitwise Operators | &: Binary AND <br /> \|: Binary OR <br /> ^: Binary XOR <br /> ~: Binary One's Complement <br /> <<: Binary Shift Left <br /> >>: Binary Shift Right
+| Logical Operators | &&: Logical AND <br /> \||: Logical OR <br /> !: Logical NOT
+| Other Operators | sizeof, ?:, & (for memory address of the operand), ., ->, << (print values), >> (gets input value)
 
+#### b. Mixed type
+C++ allows mixed expression between _int_ and _float_. In a calculation, if there are 2 types: int and float, C++ will change the integer number to a floating point number with ome decimal place, which is 0, and the perform the calculation. The output data type will be float.
 
+### 6. Bindings
 
+## IV. References
+- [C++ Programming Language Instruction On GeeksforGeeks](https://www.geeksforgeeks.org/c-plus-plus/?ref=lbp)
+- [Wikipedia](https://en.wikipedia.org/wiki/C%2B%2B)
+- [C++ Tutorial on W3schools](https://www.w3schools.com/cpp/default.asp)
+- [C++ Programming with Visual Studio](https://code.visualstudio.com/docs/languages/cpp)
+- [Programiz C++ Tutorial](https://programiz.pro/learn/master-cpp?utm_source=tutorial-sidebar-nav&utm_campaign=programiz&utm_medium=referral)
+- Other sources for example code:
+  - [Type conversions](https://www.scaler.com/topics/cpp/type-conversion-in-cpp/) 
 
 
 
