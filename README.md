@@ -134,6 +134,49 @@ A key word, or a reversed word, is a word that are used for a special purpose an
 	</tr>
 </table>
 
+### 2. Naming conventions
+Naming conventions in C++ are not enforced by intepreter or compiler. They follow the standards withi the C++ community. Below are some naming conventions in C++: 
+- CamelCase: used for variables and functions.
+- PascalCase: used for classes and types.
+- Upper case with underscore: used for constants or macro.
+  
+### 3. Naming requirements for identifiers
+We have explored what words we can't not use when we name a file or a variable in C++. C++ is a case sensitive programming language, therefore, we have to be careful when naming for a variable. Rules for naming identifiers:
+- Identifier names can not start with a digit or any special character.
+- A keyword cannot be used as s identifier name.
+- Only alphabetic characters, digits, and underscores are permitted.
+- The upper case and lower case letters are distinct. i.e., A and a are different in C++.
+
+**Let's create variable of common data types in C++ using rules above**
+To create a variable, specify the type and assign it a value: _type variableName = value;_
+
+```
+#include <iostream>
+#include <map>
+#include <iterator>
+
+
+using namespace std;
+
+int main() {
+    //integer
+    int myNum = 15;
+    // string
+    string greetings = "Hello word!";
+    // floating point
+    double myNumFloat = 15.12;
+    // boolean value
+    bool b1 = true;
+    // array
+    string cars[4] = {"Volvo", "BMW", "Ford", "Mazda"};
+    // map
+    map<string, int> clothingStore = { {"tshirt", 10}, {"pants", 12}, {"sweaters", 18} };
+    return 0;
+}
+```
+### 4. Types
+
+
 
 
 
