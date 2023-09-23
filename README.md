@@ -40,7 +40,7 @@ When using Code Runner, the output of our program will be shown in the Output pa
   - Check off the option and you are good to go.
 #### c. "Hello World" program
 Let's begin with the most basic program: "Hello World". Please enter the code below to run your very first C++ program:
-```
+```cpp
 #include <iostream>
 
 int main() {
@@ -146,12 +146,13 @@ We have explored what words we can't not use when we name a file or a variable i
 - A keyword cannot be used as s identifier name.
 - Only alphabetic characters, digits, and underscores are permitted.
 - The upper case and lower case letters are distinct. i.e., A and a are different in C++.
+<!-- https://www.geeksforgeeks.org/cpp-keywords/ -->
 
 **Let's create variable of common data types in C++ using rules above**
 
 To create a variable, specify the type and assign it a value: _type variableName = value;_
 
-```
+```cpp
 #include <iostream>
 #include <map>
 #include <iterator>
@@ -175,7 +176,103 @@ int main() {
     return 0;
 }
 ```
-### 4. Types
+### 4. Language Types
+#### a. C++ is a statically-typed language  
+
+```cpp
+#include <iostream>
+#include <string>
+using namespace std;
+  
+int number(int n){
+  return n;
+}
+  
+int main() {
+  
+    // Here every variable is defined by 
+    // specifying data type to it
+    string str = "GeeksforGeeks";
+    int num = 109;
+    float flo = 12.99;
+    cout << "I'm a string with value: " << str;
+    cout << "I'm a number with value: " << number(num);
+    cout << "I'm a floating point number with value: " << flo;
+    return 0;
+}
+```
+<!-- https://www.geeksforgeeks.org/what-is-a-typed-language/ -->
+
+#### b. C++ is considered strongly typed
+```cpp
+#include <iostream>
+using namespace std;
+ 
+void add(int a, double b)
+{
+    // printing a and b.
+    cout << "sum=" << (a + b);
+}
+ 
+void add(double a, int b)
+{
+    // printing a and b.
+    cout << endl << "sum=" << (a + b);
+}
+ 
+int main()
+{
+    // calling add function on line 4.
+    add(10, 2.5);
+ 
+    // calling add function with 3
+    // parameters that will give
+    // error.
+    add(5.5, 6, 7);
+    return 0;
+}
+```
+<!-- https://www.geeksforgeeks.org/strict-type-checking-in-cpp/ -->
+
+#### c. C++ can be both explicit and implicit. 
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    // implicit example
+    int int_var1 = 50;
+    char char_var1 = 'a';
+
+    int_var1 = int_var1 + char_var1;
+    // char_var is implicitly converted to the integer ASCII of 'a'.
+     // ASCII of 'a' is 97.
+
+    cout << "The value of (50 + 'a') is: " << int_var1 << endl;
+
+    // Now, converting int_var to a float (implicitly).
+    float float_var1 = int_var1 * 1.5;
+
+     cout << "The value of float_var is: " << float_var1 << endl;
+
+    // explicit example
+    char char_var2 = 'a';
+    int int_var2;
+
+     // Explicitly converting a character variable to an integer variable.
+    int_var2 = (int) char_var2; // Using cast notation.
+
+    cout << "The value of char_var is: " << char_var2 << endl;
+    cout << "The value of int_var is: " << int_var2 << endl;
+
+    return 0;
+}
+```
+<!-- https://www.scaler.com/topics/cpp/type-conversion-in-cpp/ -->
+#### d. Mutable vs Immuatable variables
+In C++, variables can mutable or immutable based on how they are declared and used. Basically, primitives like int, double, float, char, string, bool or objects and non-constant variables are mutable. However, if you want your variable to be immutable, you can declare it with "const" keyword.
+
+### 5. Types in operation
 
 
 
