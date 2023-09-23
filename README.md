@@ -148,6 +148,7 @@ We have explored what words we can't not use when we name a file or a variable i
 - The upper case and lower case letters are distinct. i.e., A and a are different in C++.
 
 **Let's create variable of common data types in C++ using rules above**
+
 To create a variable, specify the type and assign it a value: _type variableName = value;_
 
 ```
