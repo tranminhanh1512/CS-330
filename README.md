@@ -280,7 +280,7 @@ In C++, variables can mutable or immutable based on how they are declared and us
 | Assignment Operators | =: Assign <br /> +=: Add and assign <br /> -=: Subtract and assign <br /> *=: Multiply and assign <br /> /=: Divide and assign 
 | Relational operators | ==: Is equal to <br /> !=: Not equal to <br /> >: Greater than <br /> <: Less than <br /> >= Greater than or Equal to <br /> <= Less than or Equal to
 |Bitwise Operators | &: Binary AND <br /> \|: Binary OR <br /> ^: Binary XOR <br /> ~: Binary One's Complement <br /> <<: Binary Shift Left <br /> >>: Binary Shift Right
-| Logical Operators | &&: Logical AND <br /> \||: Logical OR <br /> !: Logical NOT
+| Logical Operators | &&: Logical AND <br /> \|\|: Logical OR <br /> !: Logical NOT
 | Other Operators | sizeof, ?:, & (for memory address of the operand), ., ->, << (print values), >> (gets input value)
 
 #### b. Mixed type
