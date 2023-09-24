@@ -284,9 +284,24 @@ In C++, variables can mutable or immutable based on how they are declared and us
 | Other Operators | sizeof, ?:, & (for memory address of the operand), ., ->, << (print values), >> (gets input value)
 
 #### b. Mixed type
-C++ allows mixed expression between _int_ and _float_. In a calculation, if there are 2 types: int and float, C++ will change the integer number to a floating point number with ome decimal place, which is 0, and the perform the calculation. The output data type will be float.
+C++ allows mixed expression between _int_ and _float_. In a calculation, if there are 2 types: int and float, C++ will change the integer number to a floating point number with ome decimal place, which is 0, and the perform the calculation. The output data type will be float. However, we need to be careful when adding int and float because we may get rounding errors.
 
 ### 6. Bindings
+In C++, when we declare a variable or an object, we specify its type and name, and the compiler allocates memory for that object based on its type. For primitives data types and array/list, C++ will store on a stack. However, when we use dynamic memory allocation (e.g., new or malloc), it will store on the heap. For operators, it will be bound to their operations during compilation. 
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x = "7" + 11;
+    int y = "7" * 11;
+}
+```
+For example, we can't run the code above because of the mismatch type. In C++, we need to use same data types (except for int and float) in order to do the operation. On the other hand, for array/list, C++ allows us to create an array that can have elements of different types, unlike Java. But, you should pay attention when doing this because mixed types can lead to some errors like readability. C++ also let us to convert between data types, but once again, _be careful_. 
+
+There is one built-in complex data type, which is one of the core components in C++, pointer. Pointer is used to store the address of other variables. Pointers in C++ provide flexibility but can introduce issues like pointer arithmetic errors and dangling pointers.
+
+In some other languages, the compiler will manage memory. However, with C++, it gives us the control to allocate memory of variables. It's a huge advantage, but it is also a disadvantage because failing to deallocate the memory will lead to memory leaks and undefined behavior. 
 
 ## IV. References
 - [C++ Programming Language Instruction On GeeksforGeeks](https://www.geeksforgeeks.org/c-plus-plus/?ref=lbp)
