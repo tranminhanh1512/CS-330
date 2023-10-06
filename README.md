@@ -37,7 +37,7 @@ When using Code Runner, the output of our program will be shown in the Output pa
   - Press ctrl+, to open up the settings panel
   - On the search bar type code runner terminal
   - You should be able to see an option named Code-runner: Run In Terminal
-  - Check off the option and you are good to go.
+  - Check off the option and you are done
 #### c. "Hello World" program
 Let's begin with the most basic program: "Hello World". Please enter the code below to run your very first C++ program:
 ```cpp
@@ -303,7 +303,77 @@ There is one built-in complex data type, which is one of the core components in 
 
 In some other languages, the compiler will manage memory. However, with C++, it gives us the control to allocate memory of variables. It's a huge advantage, but it is also a disadvantage because failing to deallocate the memory will lead to memory leaks and undefined behavior. 
 
-## IV. References
+## IV. Loops and Functions
+### 1. Loops
+When programming, sometimes we need to excecute some operations many times. Doing it mannually will waste a lot of time and memory. Therefore, loops come to "rescue" us. Loops allow us to do a performance multiple times. Like other languagues, loops in C++ also follow the general form of a for loop statement.
+
+![alt text](https://www.tutorialspoint.com/cplusplus/images/loop_architecture.jpg)
+
+There are 4 types of loop that C++ provides us: while loop, for loop, do...while loop, and nested loops.
+#### a. While loop
+A  while loop will check the condition first, and then execute the body (a statement or a group of statements) while the condition remains true.
+
+_Flow diadram of while loop_
+
+![alt text](https://media.geeksforgeeks.org/wp-content/uploads/20220927171802/WhileloopinC2.png)
+
+#### b. For loop
+For loop let us to repeat a sequence of statements at a specific number of times. It will initialize first, then check the condition, execute the body, and lastly update loop variable after each iteration.
+
+_Flow diadram of for loop_
+
+![alt text](https://media.geeksforgeeks.org/wp-content/uploads/loops.png)
+
+#### c. Do...while loop
+Do...while loop is a reverse loop of while loop. It will execute the body first, then check the condition at the end of the loop body. Of course, it will perform operations as long as the condition is true.
+
+_Flow diadram of do,,,while loop_
+
+![alt text](https://media.geeksforgeeks.org/wp-content/uploads/20221006152307/dowhileloopinc.png)
+
+#### d. Nested loop
+Nested loop is a loop that allows us to do a loop in other loop. You can choose whatever loop above, and it will follow the rule of the loop you choose to execute.
+
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+
+// While loop
+int i = 0;
+while (i <= 3) {
+	cout << "Hello the " << i << " times" << endl;
+	i++;
+}
+
+// For loop
+for (int j = 0; j <= 3; j++) {
+	cout << "Hi the " << j << " times" << endl;
+}
+
+// Do-while loop
+int k = 0;
+do {
+	cout << "Xin chao the " << k << " times" << endl;
+	k++;
+} while (k <= 3);
+
+// Nested loop
+for (int m = 0; m <= 3; m++) {
+    for (int n = 0; n <= 2; n++){
+        cout << "Pair: " << m << ", " << n << endl;
+    }
+}
+return 0;
+}
+```
+
+### 2. Functions
+
+
+## V. References
 - [C++ Programming Language Instruction On GeeksforGeeks](https://www.geeksforgeeks.org/c-plus-plus/?ref=lbp)
 - [Wikipedia](https://en.wikipedia.org/wiki/C%2B%2B)
 - [C++ Tutorial on W3schools](https://www.w3schools.com/cpp/default.asp)
