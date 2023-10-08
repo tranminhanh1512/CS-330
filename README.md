@@ -371,7 +371,112 @@ return 0;
 ```
 
 ### 2. Functions
+#### a. Declare functions
+To declare a function, we need to specify return type first, then function name, followed by parentheses, which is where you pass paramteter in. For function that don't return anything, instead of choosing return type, we will use 'void' keyword.
+```
+return_type function_name(parameters) {
+	function body
+}
+```
+Now, we will try to write a simple function: Multiply2num():
+```cpp
+#include <iostream>
+using namespace std;
 
+int multiply2nums(int x, int y){
+    int z = x*y;
+    return z;
+}
+
+int main() {
+    int a = multiply2nums(10,2);
+    cout << a << endl;
+}
+```
+In C++, we have to declare functions before using it, but order does matter.
+
+#### 2. Recursive function:
+C++ also support recursive function, but we need to be very careful to define the base and the exit condition to it, or else it will run infinitely.
+```cpp
+// Factorial of n = 1*2*3*...*n
+// Link: https://www.programiz.com/cpp-programming/recursion#google_vignette
+#include <iostream>
+using namespace std;
+
+int factorial(int);
+
+int main() {
+    int n, result;
+
+    cout << "Enter a non-negative number: ";
+    cin >> n;
+
+    result = factorial(n);
+    cout << "Factorial of " << n << " = " << result;
+    return 0;
+}
+
+int factorial(int n) {
+    if (n > 1) {
+        return n * factorial(n - 1);
+    } else {
+        return 1;
+    }
+}
+```
+#### c. Parameters and Return values
+Like Python and Java, when defining parameters for function, we can pass as many paramters as we want, and they do not need to be the same type. However, when we return values from function. we can't return multiple values at the same time, we can only return one value per time. 
+#### d. Passing arguments
+There are three ways we can pass in an argument to function in C++: pass by value, pass by reference, pass by address aka pointer.
+- Pass by values: like what we did in a.
+- Pass by reference:
+```cpp
+//Link: https://www.geeksforgeeks.org/passing-by-pointer-vs-passing-by-reference-in-cpp/
+#include <iostream>
+using namespace std;
+void swap(int& x, int& y)
+{
+	int z = x;
+	x = y;
+	y = z;
+}
+
+int main()
+{
+	int a = 45, b = 35;
+	cout << "Before Swap\n";
+	cout << "a = " << a << " b = " << b << "\n";
+
+	swap(a, b);
+
+	cout << "After Swap with pass by reference\n";
+	cout << "a = " << a << " b = " << b << "\n";
+}
+```
+- Pass by address:
+```cpp
+// Link: https://www.geeksforgeeks.org/parameter-passing-techniques-in-c-cpp/
+#include <iostream>
+using namespace std;
+ 
+void swapnum(int* i, int* j)
+{
+    int temp = *i;
+    *i = *j;
+    *j = temp;
+}
+ 
+int main(void)
+{
+    int a = 10, b = 20;
+ 
+    // passing parameters
+    swapnum(&a, &b);
+ 
+    cout << "a is " << a << " and b is " << b<<endl;
+    return 0;
+}
+```
 
 ## V. References
 - [C++ Programming Language Instruction On GeeksforGeeks](https://www.geeksforgeeks.org/c-plus-plus/?ref=lbp)
