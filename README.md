@@ -477,6 +477,19 @@ int main(void)
     return 0;
 }
 ```
+### 3. Storage Locations of Arguments, Parameters, and Local Variables 
+- Local-function variables: on stack
+- Global or static variables: per-process data area
+- Parameters and Arguments:
+  - Primitives data types: on stacl
+  - Objects or more complex data types: ref-to-heap-on-stack, which means the reference to the object is stored on the stack while the object itself is in the heap.
+
+### 4. Scoping rules of variables
+- Global variables, function definitions, and function prototypes placed outside all functions can be used anywhere in the file and exist for the entire duration of the program. - Variables that are declared inside a function or a code block are local to its function/code block and can't be used outside. They only exist during the execution of function/code block. Everytime we call a function/code block, the varibles inside them will be refresh. All of those variables will be disappear when the function/code block ends.
+- Static variables in a block/function can only be accessed inside its function/block of code. However, it will retain its value across function calls and exists from the first call until the program ends.
+
+### 5. Side effects in C++
+Side effects happen when a function that does anything other than return its value, such as accepting input, producing output, or modifying the values of variables (other than its own local variables). In C++, side effects will occur when a subprogram accidently modifies a global variable, or the value of a pointer that is passed as an argument. In C++, there are no strict guardrails against side-effects, but there are some ways we can do to avoid it: use immutable or constant variable, minimize global variables, or avoid  unrestricted pointers. Like Java and Python, C++ use static scope : all variables bound to a scope before run.
 
 ## V. References
 - [C++ Programming Language Instruction On GeeksforGeeks](https://www.geeksforgeeks.org/c-plus-plus/?ref=lbp)
