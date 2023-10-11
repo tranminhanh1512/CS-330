@@ -485,7 +485,10 @@ int main(void)
   - Objects or more complex data types: ref-to-heap-on-stack, which means the reference to the object is stored on the stack while the object itself is in the heap.
 
 ### 4. Scoping rules of variables
-- Global variables, function definitions, and function prototypes placed outside all functions can be used anywhere in the file and exist for the entire duration of the program. - Variables that are declared inside a function or a code block are local to its function/code block and can't be used outside. They only exist during the execution of function/code block. Everytime we call a function/code block, the varibles inside them will be refresh. All of those variables will be disappear when the function/code block ends.
+- Global variables, function definitions, and function prototypes placed outside all functions can be used anywhere in the file and exist for the entire duration of the program.
+
+- Variables that are declared inside a function or a code block are local to its function/code block and can't be used outside. They only exist during the execution of function/code block. Everytime we call a function/code block, the varibles inside them will be refresh. All of those variables will be disappear when the function/code block ends.
+
 - Static variables in a block/function can only be accessed inside its function/block of code. However, it will retain its value across function calls and exists from the first call until the program ends.
 
 ### 5. Side effects in C++
