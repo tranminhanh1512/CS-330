@@ -481,7 +481,7 @@ int main(void)
 - Local-function variables: on stack
 - Global or static variables: per-process data area
 - Parameters and Arguments:
-  - Primitives data types: on stacl
+  - Primitives data types: on stack
   - Objects or more complex data types: ref-to-heap-on-stack, which means the reference to the object is stored on the stack while the object itself is in the heap.
 
 ### 4. Scoping rules of variables
@@ -494,7 +494,120 @@ int main(void)
 ### 5. Side effects in C++
 Side effects happen when a function that does anything other than return its value, such as accepting input, producing output, or modifying the values of variables (other than its own local variables). In C++, side effects will occur when a subprogram accidently modifies a global variable, or the value of a pointer that is passed as an argument. In C++, there are no strict guardrails against side-effects, but there are some ways we can do to avoid it: use immutable or constant variable, minimize global variables, or avoid  unrestricted pointers. Like Java and Python, C++ use static scope : all variables bound to a scope before run.
 
-## V. References
+## V. Loops, if/else, switch, logical operators
+### 1. Boolean values
+C++ has a _boolean_ data type, which is declared with the _bool_ keyword, can take the values true or false. The default numeric values of boolean values are 1 for true and 0 for false. Therefore, we can use bool-type variables or values true and false in mathematical expressions also. Howver, the most common use of the bool datatype is for conditional statements. 
+### 2. Conditional statements
+There are many types of conditional statements in C++
+![alt text](https://media.geeksforgeeks.org/wp-content/uploads/20230424101456/Conditional-Statements-in-c.webp)
+
+- If statements:
+  
+![alt text](https://media.geeksforgeeks.org/wp-content/uploads/20230310131453/flowchart-of-if-in-c.png)
+
+- If-esle statments:
+  
+![alt text](https://media.geeksforgeeks.org/wp-content/uploads/20230220123250/flowchart_of_if_else_in_c.png)
+
+- Nested if-else statements:
+
+![alt text](https://media.geeksforgeeks.org/wp-content/uploads/20230424102041/nested-if-else-flowchart.webp)
+
+- If-else-if ladder statements:
+
+![alt text](https://media.geeksforgeeks.org/wp-content/uploads/20230424101627/if-else-if-flowchart.webp)
+
+- Switch statements:
+
+![alt text](https://media.geeksforgeeks.org/wp-content/uploads/20230224161406/switch-case-in-c.png)
+
+C++ also supports Switch-case and it aslo use "break" to get out of it. We can't use "continue" to have all of the conditions evaluated.
+
+
+In C++, code blocks under each condition in selection control statements are delimited using curly braces { }. Let's practice with some examples of conditional statements!
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+   int x = 5;
+   //one-condition if/else statement
+   if( x > 5){
+       cout << "x is bigger than 5" <<endl;
+   }else {
+       cout << "x is equal or less than 5" << endl;
+   }
+
+
+    // multi-condition if/else statement
+    int y = 2;
+    int z = 10;
+    if (y > 5 && z < 10){
+        cout << "Here" <<endl;
+    }else {
+        cout << "There" <<endl;
+    }
+
+    //if-elseif-else statments
+    int a = 25;
+    if (a%3==0){
+        cout<<"a is divisible by 3"<<endl;
+    } else if (a%5==0) {
+        cout<<"a is divisible by 5"<<endl;
+    } else {
+        cout<<"a is not divisible by both 3 or 5"<<endl;
+    }
+
+    //switch case
+    int dogAge = 5; 
+  
+    // declaring switch cases 
+    switch (dogAge) { 
+    case 2: 
+        printf("Your dog is a kid"); 
+        break; 
+    case 5: 
+        printf("Your dog is a teenager"); 
+        break; 
+    default: 
+        printf("All dogs are our babies"); 
+        break; 
+    } 
+
+   return 0;
+}
+```
+While using nested conditional statements, we may encounter dangling else problems which else statements don't know its if. To resolve this in C++, we must use correct braces and identation or if-else if-else statements to specify if-else pair correctly.
+
+### 3. Short-circuit
+C++ uses short-circuit evaluation. It occurs while evaluating ‘&&’ (AND) and ‘||'(OR) logical operators. 
+- For and "&&" operator, if the left condition is false, the expression will be always false no matter of the right condition. So C++ will avoid evaluating the right-hand side in this situation. C only checks the second one when the first condition is true.
+- For or "||" operator, if the left-hand side is true, the expression will always yield true irrespective of the value of the right-hand side, so C won't continue to evaluate the right-hand side. C only checks the second condition if the first one is false.
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+   bool b1 = true;
+   bool b2 = false;
+
+    // AND operator
+   if (b1&&b2){
+       cout<< "True"<<endl;
+   }else{
+       cout<< "False"<<endl;
+   }
+
+    // OR operator
+    if (b1||b2){
+       cout<< "True"<<endl;
+    }else{
+       cout<< "False"<<endl;
+    }
+    return 0;
+}
+```
+## VI. References
 - [C++ Programming Language Instruction On GeeksforGeeks](https://www.geeksforgeeks.org/c-plus-plus/?ref=lbp)
 - [Wikipedia](https://en.wikipedia.org/wiki/C%2B%2B)
 - [C++ Tutorial on W3schools](https://www.w3schools.com/cpp/default.asp)
