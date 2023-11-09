@@ -607,7 +607,51 @@ int main() {
     return 0;
 }
 ```
-## VI. References
+
+## VI. Classes and Inheritance
+As with many other programming languages, C++ also supports the concept of objects and classes. In C++, a class is a building block that leads Object-Oriented programming. It is a user-friendly data type, which is a detailed description, a definition, and a template for what an object will be. It has data members and member functions. The blueprint for any object is a class, which can be accessed and used by creating an instance. Object is an instance of class, which helps us access class attributes and methods.
+
+### 1. Defining Class and Declaring Objects
+To define a class in C++, we use the keyword _class_, followed by the name of class. Class name should be a noun, in mixed case with upper case letters as word separators, and no underscore. Especially, the first character in the class name must be capitalized. The body of a class is defined within the curly brackets and a semicolon at the end. 
+
+To declare an object, we need to specify the class name first, then the object name. After that, we can access the class attributes by using the dot syntax on the object.
+```
+class ClassName;
+ClassName ObjectName;
+Object.classFunction;
+```
+### 2. Functions in Class
+C++ is a special programming language, we can define class function by two ways: inside and outside the class definition.
+#### a. Inside class
+There are three elements inside our class: access specifier, data members, and member functions. Here is a format of a class:
+```
+class ClassName
+{
+	Access specifier;
+	Data members;
+	Functions(parameters);
+};
+```
+#### b. Outside class
+To define a function outside of a class, scope resolution operator :: is used.
+```
+returnType ClassName::FunctionName(parameters)
+{
+	//body of function;
+}
+```
+#### c. Special functions in class
+- Constructors: called by the compiler every time an object of that class is instantiated.
+- Destructors: called by the compiler when the scope of the object ends.
+- ToString: return a string that represents the current object.
+### 3. Inheritance
+A class can be derived from multiple classes and inherits all data and functions from all these parent class. To define an inheritance class, we use a class derivation list to specify the base class. Here is the format of inheritance:
+```
+class derivedClassName: AccessSpecifier ParentClassNameA, AccessSpecifier ParentClassNameB, AccessSpecifier ParentClassNameC, etc
+```
+However, a derived class can only access non-private members of parent class. Therefore, if you want to create an inheritance class, make sure you declare all data and functions in the parent class to be non-private.
+
+## VII. References
 - [C++ Programming Language Instruction On GeeksforGeeks](https://www.geeksforgeeks.org/c-plus-plus/?ref=lbp)
 - [Wikipedia](https://en.wikipedia.org/wiki/C%2B%2B)
 - [C++ Tutorial on W3schools](https://www.w3schools.com/cpp/default.asp)
