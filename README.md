@@ -610,7 +610,6 @@ int main() {
 
 ## VI. Classes and Inheritance
 As with many other programming languages, C++ also supports the concept of objects and classes. In C++, a class is a building block that leads Object-Oriented programming. It is a user-friendly data type, which is a detailed description, a definition, and a template for what an object will be. It has data members and member functions. The blueprint for any object is a class, which can be accessed and used by creating an instance. Object is an instance of class, which helps us access class attributes and methods.
-
 ### 1. Defining Class and Declaring Objects
 To define a class in C++, we use the keyword _class_, followed by the name of class. Class name should be a noun, in mixed case with upper case letters as word separators, and no underscore. Especially, the first character in the class name must be capitalized. The body of a class is defined within the curly brackets and a semicolon at the end. 
 
@@ -647,10 +646,118 @@ returnType ClassName::FunctionName(parameters)
 ### 3. Inheritance
 A class can be derived from multiple classes and inherits all data and functions from all these parent class. To define an inheritance class, we use a class derivation list to specify the base class. Here is the format of inheritance:
 ```
-class derivedClassName: AccessSpecifier ParentClassNameA, AccessSpecifier ParentClassNameB, AccessSpecifier ParentClassNameC, etc
+class derivedClassName: AccessSpecifier ParentClassNameA, AccessSpecifier ParentClassNameB, etc
 ```
 However, a derived class can only access non-private members of parent class. Therefore, if you want to create an inheritance class, make sure you declare all data and functions in the parent class to be non-private.
 
+Inheritance allows a derived class to provide a specific implementation of a function that is already declared in its base class. Therefore, we will have overloading methods name. The way that C++ solves this problem is let the child class overrides the base class functions. The function in the parent class will act like a default, and when we use child class, the function with the same name in it will be used instead. 
+
+_Note_: As we mention before, C++ is a static typed programming language, which means the decision about which function to call is made at compile time. We need to create exact object from exact class in order to use the right function because the specific function that gets called is determined by the type of the object at running time.
+### 4. Example
+Let's me walk you through an example of using class and inheritance in C++ to help you understand and explore more about it.
+
+In this example, we have a super class: Animal, and two sub classes: Cat and Dog. In Cat and Dog classes, we overrides the humanEquiAge function because cats and dogs have different ways to calculate their human equivalent age. In the main driver, I create 1 dog and 1 cat and then print out their information.
+```cpp
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Animal {
+protected:
+    string name;
+    int age;
+    int weight;
+
+public:
+    void setAnimal(string n, int a, int w) {
+        name = n;
+        age = a;
+        weight = w;
+    }
+
+    string getName() {
+        return name;
+    }
+
+    int getAge() {
+        return age;
+    }
+
+    void setName(string newName) {
+        name = newName;
+    }
+
+    void setAge(int newAge) {
+        age = newAge;
+    }
+
+    int humanEquiAge() {
+        if (age == 1) {
+            return 15;
+        } else if (age == 2) {
+            return 24;
+        } else {
+            return 24 + (age - 2) * 4;
+        }
+    }
+
+    string toString() {
+        return name + ", age: " + to_string(age) + ", weight: " + to_string(weight);
+    }
+};
+
+class Dog : public Animal {
+public:
+    Dog(string n, int a, int w) {
+        setAnimal(n, a, w);
+    }
+
+    int humanEquiAge() {
+        if (age == 1) {
+            return 15;
+        } else if (age == 2) {
+            return 21;
+        } else {
+            if (weight < 20) {
+                return 21 + (age - 2) * 4;
+            } else if (weight >= 20 && weight < 50) {
+                return 21 + (age - 2) * 5;
+            } else if (weight >= 50 && weight < 90) {
+                return 21 + (age - 2) * 6;
+            } else {
+                return 21 + (age - 2) * 7;
+            }
+        }
+    }
+};
+
+class Cat : public Animal {
+public:
+    Cat(string n, int a, int w) {
+        setAnimal(n, a, w);
+    }
+
+    int humanEquiAge() {
+        if (age == 1) {
+            return 15;
+        } else if (age == 2) {
+            return 24;
+        } else {
+            return 24 + (age - 2) * 4;
+        }
+    }
+};
+
+int main() {
+    Dog dog("Nick", 7, 21);
+    Cat cat("Vang", 11, 10);
+
+    cout << "Dog: " << dog.toString() << ", human equivalent age: " << dog.humanEquiAge() << endl;
+    cout << "Cat: " << cat.toString() << ", human equivalent age: " << cat.humanEquiAge() << endl;
+
+    return 0;
+}
+```
 ## VII. References
 - [C++ Programming Language Instruction On GeeksforGeeks](https://www.geeksforgeeks.org/c-plus-plus/?ref=lbp)
 - [Wikipedia](https://en.wikipedia.org/wiki/C%2B%2B)
