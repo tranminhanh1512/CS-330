@@ -4,11 +4,11 @@ This repo is an guideline for learning C++ in Structure and Organization of Prog
 Author: Minh Anh Tran
 
 ## I. Introduction and Overview of C++
-### 1. What is C++? 
+### What is C++? 
 C++ is one of the world's most popular programming languages. It is a cross-platform language that can be used to create high-performance applicationn and gives programmers a high level of control over system resources and memory. 
-### 2. History
+### History
 C++ was created by Bjarne Stroustrup at Bell Labs in 1983 as an extension of the C programming language. It has expanded significantly overtime and was updated 4 major times in 2011, 2014, 2017, and 2020 to C++11, C++14, C++17, C++20. C++ is usually implemented as a complier language and used to develop applications that can be adapted to multiple platforms. C++ has proven to be highly versatile, finding utility in diverse domains. Its notable strengths lie in software infrastructure and applications with limited resources. These include desktop software, video game development, server-side applications such as e-commerce, web search engines, and databases, as well as performance-critical systems like telephone switching systems and space probes.
-### 3. Why we should learn C++?
+### Why we should learn C++?
 C++ has a large, active community of developers and users, and a wealth of resources and tools available for learning and using the language. It provides a solid foundation in programming concepts such as data structures, algorithms, memory management, and object-oriented programming. C++ supports cross-platform development and allows for fine-grained control over system resources and memory, 
 There are many soures to learn C++ now, and here are top 5 resources for now:
 - Best YouTube Channel: Caleb Hurry
@@ -18,9 +18,9 @@ There are many soures to learn C++ now, and here are top 5 resources for now:
 - Best Online Webinar: C++ Essential Training by LinkedIn Learning
 
 ## II. Getting Started
-### 1. Set up C++ environment on MacOS
+### Set up C++ environment on MacOS
 C++ is a compiled language meaning your program's source code must be translated (compiled) before it can be run on your computer. Therefore, we have to install VS Code and a compliler.
-#### a. Install a complier
+#### 1. Install a complier
 Open a macOS Terminal window and enter the following command:
 ```
 xcode-select --install
@@ -29,7 +29,7 @@ To ensure that our clang is installed, enter the below command:
 ```
 clang --version
 ```
-#### b. Install Visual Studo C/C++ IDE
+#### 2. Install Visual Studo C/C++ IDE
 - Firstly, we need to install [Visual Studio on MacOS](https://code.visualstudio.com/docs/setup/mac).
 - Secondly, install the [C++ extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools). You can install the C/C++ extension by searching for 'c++' in the Extensions view.
 - Lastly, install the [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) to run C++. You can also install the Code Runner by searching for 'Code Runner' in the Extensions view.
@@ -38,7 +38,7 @@ When using Code Runner, the output of our program will be shown in the Output pa
   - On the search bar type code runner terminal
   - You should be able to see an option named Code-runner: Run In Terminal
   - Check off the option and you are done
-#### c. "Hello World" program
+#### 3. "Hello World" program
 Let's begin with the most basic program: "Hello World". Please enter the code below to run your very first C++ program:
 ```cpp
 #include <iostream>
@@ -49,13 +49,13 @@ int main() {
 }
 ```
 Next, push the Run code button to see the output. "Hello World!" will be printed in the terminal. 
-#### d. Write comments in C++
+#### 4. Write comments in C++
 There are two ways to write comments in C++
 - Multiline comments: The /* (slash, asterisk) characters, followed by comments, ending with the */ characters.
 - Single-line comments: The // (two slashes) characters, followed by comments.
 
 ## III. Data types, Naming conventions, and Bindings
-### 1. Keywords
+### Keywords
 A key word, or a reversed word, is a word that are used for a special purpose and cannot be used as an identifier, such as the name of a variable, function, or label – it is "reserved from use". In C++, there are 95 total keywords. Here is a table for some common keywords:
 
 <table class="table">
@@ -134,13 +134,13 @@ A key word, or a reversed word, is a word that are used for a special purpose an
 	</tr>
 </table>
 
-### 2. Naming conventions
+### Naming conventions
 Naming conventions in C++ are not enforced by intepreter or compiler. They follow the standards within the C++ community. Below are some naming conventions in C++: 
 - CamelCase: used for variables and functions.
 - PascalCase: used for classes and types.
 - Upper case with underscore: used for constants or macro.
   
-### 3. Naming requirements for identifiers
+### Naming requirements for identifiers
 We have explored what words we can't not use when we name a file or a variable in C++. C++ is a case sensitive programming language, therefore, we have to be careful when naming for a variable. Rules for naming identifiers:
 - Identifier names can not start with a digit or any special character.
 - A keyword cannot be used as s identifier name.
@@ -176,8 +176,8 @@ int main() {
     return 0;
 }
 ```
-### 4. Language Types
-#### a. C++ is a statically-typed language  
+### Language Types
+#### 1. C++ is a statically-typed language  
 
 ```cpp
 #include <iostream>
@@ -203,7 +203,7 @@ int main() {
 ```
 <!-- https://www.geeksforgeeks.org/what-is-a-typed-language/ -->
 
-#### b. C++ is considered strongly typed
+#### 2. C++ is considered strongly typed
 ```cpp
 #include <iostream>
 using namespace std;
@@ -234,7 +234,7 @@ int main()
 ```
 <!-- https://www.geeksforgeeks.org/strict-type-checking-in-cpp/ -->
 
-#### c. C++ can be both explicit and implicit. 
+#### 3. C++ can be both explicit and implicit. 
 ```cpp
 #include <iostream>
 using namespace std;
@@ -269,11 +269,11 @@ int main() {
 }
 ```
 <!-- https://www.scaler.com/topics/cpp/type-conversion-in-cpp/ -->
-#### d. Mutable vs Immuatable variables
+#### 4. Mutable vs Immuatable variables
 In C++, variables can mutable or immutable based on how they are declared and used. Basically, primitives like int, double, float, char, string, bool or objects and non-constant variables are mutable. However, if you want your variable to be immutable, you can declare it with "const" keyword.
 
-### 5. Types in operation
-#### a. Operators
+### Types in operation
+#### 1. Operators
 | Operator  | Operation 
 | --------- | --------- 
 | Arithmetic Operators | +: Addition  <br /> -: Subtraction  <br /> *: Multiplication  <br /> /: Division  <br /> %: Modulo Operation (Remainder after division) <br /> ++: Increment <br /> --: Decrement
@@ -283,10 +283,10 @@ In C++, variables can mutable or immutable based on how they are declared and us
 | Logical Operators | &&: Logical AND <br /> \|\|: Logical OR <br /> !: Logical NOT
 | Other Operators | sizeof, ?:, & (for memory address of the operand), ., ->, << (print values), >> (gets input value)
 
-#### b. Mixed type
+#### 2. Mixed type
 C++ allows mixed expression between _int_ and _float_. In a calculation, if there are 2 types: int and float, C++ will change the integer number to a floating point number with ome decimal place, which is 0, and the perform the calculation. The output data type will be float. However, we need to be careful when adding int and float because we may get rounding errors.
 
-### 6. Bindings
+### Bindings
 In C++, when we declare a variable or an object, we specify its type and name, and the compiler allocates memory for that object based on its type. For primitives data types and array/list, C++ will store on a stack. However, when we use dynamic memory allocation (e.g., new or malloc), it will store on the heap. For operators, it will be bound to their operations during compilation. 
 ```cpp
 #include <iostream>
@@ -304,34 +304,34 @@ There is one built-in complex data type, which is one of the core components in 
 In some other languages, the compiler will manage memory. However, with C++, it gives us the control to allocate memory of variables. It's a huge advantage, but it is also a disadvantage because failing to deallocate the memory will lead to memory leaks and undefined behavior. 
 
 ## IV. Loops and Functions
-### 1. Loops
+### Loops
 When programming, sometimes we need to excecute some operations many times. Doing it mannually will waste a lot of time and memory. Therefore, loops come to "rescue" us. Loops allow us to do a performance multiple times. Like other languagues, loops in C++ also follow the general form of a for loop statement.
 
 ![alt text](https://www.tutorialspoint.com/cplusplus/images/loop_architecture.jpg)
 
 There are 4 types of loop that C++ provides us: while loop, for loop, do...while loop, and nested loops.
-#### a. While loop
+#### 1. While loop
 A  while loop will check the condition first, and then execute the body (a statement or a group of statements) while the condition remains true.
 
 _Flow diadram of while loop_
 
 ![alt text](https://media.geeksforgeeks.org/wp-content/uploads/20220927171802/WhileloopinC2.png)
 
-#### b. For loop
+#### 2. For loop
 For loop let us to repeat a sequence of statements at a specific number of times. It will initialize first, then check the condition, execute the body, and lastly update loop variable after each iteration.
 
 _Flow diadram of for loop_
 
 ![alt text](https://media.geeksforgeeks.org/wp-content/uploads/loops.png)
 
-#### c. Do...while loop
+#### 3. Do...while loop
 Do...while loop is a reverse loop of while loop. It will execute the body first, then check the condition at the end of the loop body. Of course, it will perform operations as long as the condition is true.
 
 _Flow diadram of do,,,while loop_
 
 ![alt text](https://media.geeksforgeeks.org/wp-content/uploads/20221006152307/dowhileloopinc.png)
 
-#### d. Nested loop
+#### 4. Nested loop
 Nested loop is a loop that allows us to do a loop in other loop. You can choose whatever loop above, and it will follow the rule of the loop you choose to execute.
 
 ```cpp
@@ -370,8 +370,8 @@ return 0;
 }
 ```
 
-### 2. Functions
-#### a. Declare functions
+### Functions
+#### 1. Declare functions
 To declare a function, we need to specify return type first, then function name, followed by parentheses, which is where you pass paramteter in. For function that don't return anything, instead of choosing return type, we will use 'void' keyword.
 ```
 return_type function_name(parameters) {
@@ -424,9 +424,9 @@ int factorial(int n) {
     }
 }
 ```
-#### c. Parameters and Return values
+#### 3. Parameters and Return values
 Like Python and Java, when defining parameters for function, we can pass as many paramters as we want, and they do not need to be the same type. However, when we return values from function. we can't return multiple values at the same time, we can only return one value per time. 
-#### d. Passing arguments
+#### 4. Passing arguments
 There are three ways we can pass in an argument to function in C++: pass by value, pass by reference, pass by address aka pointer.
 - Pass by values: like what we did in a.
 - Pass by reference:
@@ -477,27 +477,27 @@ int main(void)
     return 0;
 }
 ```
-### 3. Storage Locations of Arguments, Parameters, and Local Variables 
+### Storage Locations of Arguments, Parameters, and Local Variables 
 - Local-function variables: on stack
 - Global or static variables: per-process data area
 - Parameters and Arguments:
   - Primitives data types: on stack
   - Objects or more complex data types: ref-to-heap-on-stack, which means the reference to the object is stored on the stack while the object itself is in the heap.
 
-### 4. Scoping rules of variables
+### Scoping rules of variables
 - Global variables, function definitions, and function prototypes placed outside all functions can be used anywhere in the file and exist for the entire duration of the program.
 
 - Variables that are declared inside a function or a code block are local to its function/code block and can't be used outside. They only exist during the execution of function/code block. Everytime we call a function/code block, the varibles inside them will be refresh. All of those variables will be disappear when the function/code block ends.
 
 - Static variables in a block/function can only be accessed inside its function/block of code. However, it will retain its value across function calls and exists from the first call until the program ends.
 
-### 5. Side effects in C++
+### Side effects in C++
 Side effects happen when a function that does anything other than return its value, such as accepting input, producing output, or modifying the values of variables (other than its own local variables). In C++, side effects will occur when a subprogram accidently modifies a global variable, or the value of a pointer that is passed as an argument. In C++, there are no strict guardrails against side-effects, but there are some ways we can do to avoid it: use immutable or constant variable, minimize global variables, or avoid  unrestricted pointers. Like Java and Python, C++ use static scope : all variables bound to a scope before run.
 
 ## V. Loops, if/else, switch, logical operators
-### 1. Boolean values
+### Boolean values
 C++ has a _boolean_ data type, which is declared with the _bool_ keyword, can take the values true or false. The default numeric values of boolean values are 1 for true and 0 for false. Therefore, we can use bool-type variables or values true and false in mathematical expressions also. Howver, the most common use of the bool datatype is for conditional statements. 
-### 2. Conditional statements
+### Conditional statements
 There are many types of conditional statements in C++
 ![alt text](https://media.geeksforgeeks.org/wp-content/uploads/20230424101456/Conditional-Statements-in-c.webp)
 
@@ -579,7 +579,7 @@ int main() {
 ```
 While using nested conditional statements, we may encounter dangling else problems which else statements don't know its if. To resolve this in C++, we must use correct braces and identation or if-else if-else statements to specify if-else pair correctly.
 
-### 3. Short-circuit
+### Short-circuit
 C++ uses short-circuit evaluation. It occurs while evaluating ‘&&’ (AND) and ‘||'(OR) logical operators. 
 - For and "&&" operator, if the left condition is false, the expression will be always false no matter of the right condition. So C++ will avoid evaluating the right-hand side in this situation. C only checks the second one when the first condition is true.
 - For or "||" operator, if the left-hand side is true, the expression will always yield true irrespective of the value of the right-hand side, so C won't continue to evaluate the right-hand side. C only checks the second condition if the first one is false.
@@ -610,7 +610,7 @@ int main() {
 
 ## VI. Classes and Inheritance
 As with many other programming languages, C++ also supports the concept of objects and classes. In C++, a class is a building block that leads Object-Oriented programming. It is a user-friendly data type, which is a detailed description, a definition, and a template for what an object will be. It has data members and member functions. The blueprint for any object is a class, which can be accessed and used by creating an instance. Object is an instance of class, which helps us access class attributes and methods.
-### 1. Defining Class and Declaring Objects
+### Defining Class and Declaring Objects
 To define a class in C++, we use the keyword _class_, followed by the name of class. Class name should be a noun, in mixed case with upper case letters as word separators, and no underscore. Especially, the first character in the class name must be capitalized. The body of a class is defined within the curly brackets and a semicolon at the end. 
 
 To declare an object, we need to specify the class name first, then the object name. After that, we can access the class attributes by using the dot syntax on the object.
@@ -619,9 +619,9 @@ class ClassName;
 ClassName ObjectName;
 Object.classFunction;
 ```
-### 2. Functions in Class
+### Functions in Class
 C++ is a special programming language, we can define class function by two ways: inside and outside the class definition.
-#### a. Inside class
+#### 1. Inside class
 There are three elements inside our class: access specifier, data members, and member functions. Here is a format of a class:
 ```
 class ClassName
@@ -631,7 +631,7 @@ class ClassName
 	Functions(parameters);
 };
 ```
-#### b. Outside class
+#### 2. Outside class
 To define a function outside of a class, scope resolution operator :: is used.
 ```
 returnType ClassName::FunctionName(parameters)
@@ -639,11 +639,11 @@ returnType ClassName::FunctionName(parameters)
 	//body of function;
 }
 ```
-#### c. Special functions in class
+#### 3. Special functions in class
 - Constructors: called by the compiler every time an object of that class is instantiated.
 - Destructors: called by the compiler when the scope of the object ends.
 - ToString: return a string that represents the current object.
-### 3. Inheritance
+### Inheritance
 A class can be derived from multiple classes and inherits all data and functions from all these parent class. To define an inheritance class, we use a class derivation list to specify the base class. Here is the format of inheritance:
 ```
 class derivedClassName: AccessSpecifier ParentClassNameA, AccessSpecifier ParentClassNameB, etc
@@ -653,7 +653,7 @@ However, a derived class can only access non-private members of parent class. Th
 Inheritance allows a derived class to provide a specific implementation of a function that is already declared in its base class. Therefore, we will have overloading methods name. The way that C++ solves this problem is let the child class overrides the base class functions. The function in the parent class will act like a default, and when we use child class, the function with the same name in it will be used instead. 
 
 _Note_: As we mention before, C++ is a static typed programming language, which means the decision about which function to call is made at compile time. We need to create exact object from exact class in order to use the right function because the specific function that gets called is determined by the type of the object at running time.
-### 4. Example
+### Example
 Let's me walk you through an example of using class and inheritance in C++ to help you understand and explore more about it.
 
 In this example, we have a super class: Animal, and two sub classes: Cat and Dog. In Cat and Dog classes, we overrides the humanEquiAge function because cats and dogs have different ways to calculate their human equivalent age. In the main driver, I create 1 dog and 1 cat and then print out their information.
